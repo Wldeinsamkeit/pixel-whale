@@ -1,0 +1,50 @@
+{
+  "name": "pixel-whale",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Pixel Whale: a tiny pixel-art whale pet swimming in the DeepSeek Harness sidebar. Feed it, pet it, watch it blow bubbles. 像素小鲸鱼桌宠。",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wldeinsamkeit/pixel-whale.git"
+  },
+  "author": {
+    "name": "Wldeinsamkeit"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "pixel-art",
+    "desktop-pet",
+    "dsh-plugin"
+  ],
+  "engines": {
+    "dsh": ">=0.1.7"
+  }
+}
